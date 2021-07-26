@@ -19,7 +19,7 @@
             <div class="panel">
                 <nav class="col-lg-12">
                     <ul class="nav nav-pills">
-                        <li><a href="/index.html" class="glyphicon glyphicon-home"></a></li>
+                        <li><a href="/index.php" class="glyphicon glyphicon-home"></a></li>
                         <li><a href="/news.html">Новости</a></li>
                         <li><a href="/gallery.html">Фотогалерея</a></li>
                         <li><a href="/guestbook.html">Гостевая</a></li>
