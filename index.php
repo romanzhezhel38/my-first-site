@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
@@ -21,7 +21,7 @@
                     <ul class="nav nav-pills">
                         <li><a href="/index.php" class="glyphicon glyphicon-home"></a></li>
                         <li><a href="/news.html">Новости</a></li>
-                        <li><a href="/gallery.html">Фотогалерея</a></li>
+                        <li><a href="/gallery.php">Фотогалерея</a></li>
                         <li><a href="/guestbook.php">Гостевая</a></li>
                         <li><a href="/about.html">Обо мне</a></li>
                     </ul>

@@ -1,6 +1,6 @@
-<?php
-$image = $_GET['file'];
-?>
+<!-- <?php
+$image = $_GET['picture'];
+?> -->
 <!doctype html>
 <html lang="ru">
 <head>
