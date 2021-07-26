@@ -24,58 +24,34 @@
                 <li><a href="/gallery.php">Фотогалерея</a></li>
                 <li><a href="/guestbook.php">Гостевая</a></li>
                 <li><a href="/about.html">Обо мне</a></li>
+                <li><a href="/calc.php">Калькулятор</a></li>
             </ul>
         </nav>
 
         <div class="container">
                 <div class="row">
-                    <h3>Комментарии</h3>
-                    <img src="/img/iphone.jpg" alt="iphone">
-                    <!-- <p class="comment"><span><strong>Alex: </strong></span>Что лучше купить iphone 7 или iphon 8?</p>
-                         <a href="/comment.php?id=1">Полностью</a>
-                    <hr>
-                    <p class="comment"><span><strong>John: </strong></span>Лучше купить телефон на Androd.</p>
-                    <a href="/comment.php?id=2">Полностью</a>
-                    <hr>
-                    <p class="comment"><span><strong>Alex: </strong></span>Спасибо!</p>
-                    <a href="/comment.php?id=3">Полностью</a> -->
-                    <?php 
+                <?php 
 
-                        foreach (getFiles(__DIR__ . '/comments/') as $comment) {
-                            $com = file_get_contents(__DIR__ . '/comments/' . $comment);
-                            ?>
-                            <p><?php echo $com;?></p><?php 
-                        }
-
+                    $data = file_get_contents(__DIR__ . '/data/db.txt');
+                    $lines = explode('###', $data);
                     ?>
+
+                    <?php
+                        foreach($lines as $line) {
+                        ?>
+                        <article><?php echo $line; ?></article>
+                        <hr>
+                        <?php
+                        }
+                    ?>
+
+                    <form action="/add.php" method="post">
+                    <textarea name="record"></textarea>
+                    <button type="submit">Добавить запись</button>
+                    </form>
                 </div>
         </div>
 
-
-        <hr>
-        <div class="container">
-            <form>
-
-                <div class="form-group">
-                    <label>Name</label>
-                    <span class="glyphicon glyphicon-ok"></span>
-                    <input type="text" class="form-control" placeholder="Написать имя">
-                </div>
-
-                <div class="form-group">
-                    <label>Email</label>
-                    <span class="glyphicon glyphicon-envelope"></span>
-                    <input type="email" class="form-control" placeholder="Написать Email">
-                </div>
-
-                <div class="form-group">
-                    <label>Message</label>
-                    <span class="glyphicon glyphicon-pencil"></span>
-                    <textarea class="form-control" placeholder="Добавить комментарий"></textarea>
-                </div>
-
-
-                <hr>
                 <button class="btn btn-success"><a href="/index.php">На главную</a></button>
 
 </body>

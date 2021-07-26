@@ -24,6 +24,7 @@
                 <li><a href="/gallery.php">Фотогалерея</a></li>
                 <li><a href="/guestbook.php">Гостевая</a></li>
                 <li><a href="/about.html">Обо мне</a></li>
+                <li><a href="/calc.php">Калькулятор</a></li>
             </ul>
         </nav>
 
@@ -32,16 +33,32 @@
                 <div class="row">
                     <?php 
                     
-                        foreach (getFiles(__DIR__ . '/img/') as $img) {
-                            ?>
-                            <img src="/img/<?php echo $img; ?>" alt="<?php echo $img; ?>">
-                            <?php
-                        }
+                        $images = scandir(__DIR__ . '/img/');
                     
+                    ?>
+
+                    <?php
+                    
+                        foreach ($images as $image) {
+                            if('.' == $image || '..' == $image) {
+                                continue;
+                            }
+                            ?>
+                            <img src="/img/<?php echo $image; ?>">
+                            <hr>
+                            <?php
+                            }                    
                     ?>
                 </div>
             </div>
         </div>
+
+        <form action="/upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="image">    
+            <button type="submit">Добавить картинку</button>
+        </form>
+
+        
         <button class="btn btn-success"><a href="/index.php">На главную</a></button>
 
 </body>

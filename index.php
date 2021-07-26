@@ -24,6 +24,7 @@
                         <li><a href="/gallery.php">Фотогалерея</a></li>
                         <li><a href="/guestbook.php">Гостевая</a></li>
                         <li><a href="/about.html">Обо мне</a></li>
+                        <li><a href="/calc.php">Калькулятор</a></li>
                     </ul>
                 </nav>
             </div>
