@@ -1,0 +1,40 @@
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    width: 960px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-weight: normal; 
+} 
+
+h1 {
+    background-color: darkblue;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    background-color: green;
+    color: white;
+}
+
+article {
+    margin-bottom: 10px;
+    text-align: justify;
+    
+}
+
+.time, .date {
+    font-size: small;
+    font-weight: bold;   
+}
+
+.heading {
+    text-transform: uppercase;
+    color: orange; 
+    font-weight: bold;
+    height: 400px;
+}
+
