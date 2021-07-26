@@ -1,4 +1,6 @@
-
+<?php
+    include __DIR__ . '/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -19,7 +21,7 @@
             <ul class="nav nav-pills">
                 <li><a href="/index.php" class="glyphicon glyphicon-home"></a></li>
                 <li><a href="/news.html">Новости</a></li>
-                <li><a href="/gallery.html">Фотогалерея</a></li>
+                <li><a href="/gallery.php">Фотогалерея</a></li>
                 <li><a href="/guestbook.php">Гостевая</a></li>
                 <li><a href="/about.html">Обо мне</a></li>
             </ul>
@@ -29,14 +31,23 @@
                 <div class="row">
                     <h3>Комментарии</h3>
                     <img src="/img/iphone.jpg" alt="iphone">
-                    <p class="comment"><span><strong>Alex: </strong></span>Что лучше купить iphone 7 или iphon 8?</p>
+                    <!-- <p class="comment"><span><strong>Alex: </strong></span>Что лучше купить iphone 7 или iphon 8?</p>
                          <a href="/comment.php?id=1">Полностью</a>
                     <hr>
                     <p class="comment"><span><strong>John: </strong></span>Лучше купить телефон на Androd.</p>
                     <a href="/comment.php?id=2">Полностью</a>
                     <hr>
                     <p class="comment"><span><strong>Alex: </strong></span>Спасибо!</p>
-                    <a href="/comment.php?id=3">Полностью</a>
+                    <a href="/comment.php?id=3">Полностью</a> -->
+                    <?php 
+
+                        foreach (getFiles(__DIR__ . '/comments/') as $comment) {
+                            $com = file_get_contents(__DIR__ . '/comments/' . $comment);
+                            ?>
+                            <p><?php echo $com;?></p><?php 
+                        }
+
+                    ?>
                 </div>
         </div>
 
