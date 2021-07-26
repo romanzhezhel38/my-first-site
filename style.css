@@ -1,40 +1,48 @@
 body {
-    font-family: Tahoma, Arial, sans-serif;
     width: 960px;
     margin: 0 auto;
+    font-family: Verdana, Arial;
+    font-size: 16px;
 }
 
-h1, h2 {
-    font-weight: normal; 
-} 
-
-h1 {
-    background-color: darkblue;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-h2 {
-    background-color: green;
+nav {
+    background-color: red;
     color: white;
 }
 
-article {
-    margin-bottom: 10px;
-    text-align: justify;
-    
+
+nav li {
+    list-style: none;
+    border: 2px solid white;
+    display: inline;
+
 }
 
-.time, .date {
-    font-size: small;
-    font-weight: bold;   
+.nav a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: 18px;
+    color: white;
+    padding: 20px
 }
 
-.heading {
-    text-transform: uppercase;
-    color: orange; 
-    font-weight: bold;
-    height: 400px;
+.link a {
+     display: inline-block;
+     text-decoration: none;
+     text-transform: lowercase;
+     font-size: 18px;
+     background-color: red;
+     color: white;
+     padding: 20px
+ }
+
+ol img {
+    width: 50px;
+    height: 50px;
+}
+
+ol li {
+    font-size: 48px;
 }
 
